@@ -189,10 +189,14 @@
     
     <script>
          const fondos = [
-        "url('https://www.emausnavarra.org/images/cali.jpg)", // Imagen 1 (ejemplo)
-        "url('https://www.emausnavarra.org/images/cali2.jpg')", // Imagen 2 (ejemplo)
-        "url('https://www.emausnavarra.org/images/cali3.jpg')", // Imagen 3 (ejemplo)
-        "url('https://www.emausnavarra.org/images/cali4.jpg')", // Imagen 3 (ejemplo)
+        "url('https://josenorbey.github.io/cali.jpg)",
+	"url('https://josenorbey.github.io/cali2.jpg)",
+	"url('https://josenorbey.github.io/cali3.jpg)",
+	"url('https://josenorbey.github.io/cali4.jpg)",
+	/* "url('https://www.emausnavarra.org/images/cali.jpg)", */ // Imagen 1 (ejemplo)
+        /* "url('https://www.emausnavarra.org/images/cali2.jpg')", */ // Imagen 2 (ejemplo)
+        /* "url('https://www.emausnavarra.org/images/cali3.jpg')", */ // Imagen 3 (ejemplo)
+        /* "url('https://www.emausnavarra.org/images/cali4.jpg')", */ // Imagen 3 (ejemplo)
     ];
 
     let indiceActual = 0;
@@ -207,7 +211,7 @@
     let body = document.body;
     let intervalo = setInterval(function() {
         cambiarFondo(body, fondos);
-    }, 30000); // Cada 30 segundos
+    }, 10000); // Cada 30 segundos
 	    // Fecha objetivo: 5 de Julio de 2025
         const targetDate = new Date('2025-07-05T09:30:00');
        

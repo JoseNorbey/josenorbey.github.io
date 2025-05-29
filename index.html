@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuenta Regresiva para Viaje a Cali, Colombia el 5 de julio de 2025</title>
+    <!-- Agrega Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-image: url("https://www.emausnavarra.org/images/cali4.jpg");
+            /* background: linear-gradient(135deg, #6a11cb 60%, #2575fc 100%); */
+            color: white;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+       
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+        }
+
+        .number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
+        }
+
+        .label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .date {
+            font-size: 1.8rem;
+            margin: 15px 0;
+            color: #FFEB3B;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .countdown-box {
+                min-width: 80px;
+                padding: 15px;
+            }
+            .number {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Añade esto */
+        .countdown-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+		        }        
+        .emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+		 .emoji-title {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+		.emoji-display {
+            font-size: 5rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+		.fa-sync-alt {
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate {
+           from { transform: rotate(0deg); }
+           to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	    <!-- <div class="emoji-display">🇨🇴</div>-->
+		<div class="emoji-title">🇨🇴 ⏱️ ✈️ 🌍 🇪🇸 &#127466;&#127480;</div>
+        <h1><i class="fas fa-plane-departure"></i>⏱️ ¡Falta poco para nuestro viaje a Cali, Colombia! <i class="fa-duotone fa-solid fa-earth-americas"></i></h1>
+		<div class="label">📅 Fecha de viaje: *5 de Julio de 2025*</div>
+        <!-- <i class="fa-solid fa-earth-americas"></i> -->
+        <div id="countdown">
+            <!-- Días -->
+            <div class="countdown-box">
+                <div class="icon"><i class="fas fa-calendar-days"></i></div>
+                <div id="days" class="number">00</div>
+                <div class="label">DÍAS</div>
+            </div>
+            
+            <!-- Horas -->
+            <div class="countdown-box">
+                <div class="icon"><i class="fas fa-clock"></i></div>
+                <div id="hours" class="number">00</div>
+                <div class="label">HORAS</div>
+            </div>
+            
+            <!-- Minutos -->
+            <div class="countdown-box">
+                <div class="icon"><i class="fas fa-hourglass-half"></i></div>
+                <div id="minutes" class="number">00</div>
+                <div class="label">MINUTOS</div>
+            </div>
+            
+            <!-- Segundos -->
+            <div class="countdown-box">
+                <div class="icon"><i class="fas fa-sync-alt"></i></div>
+                <div id="seconds" class="number">00</div>
+                <div class="label">SEGUNDOS</div>
+				<div class="emoji">⚡🥥</div>
+				<div class="emoji-display">🇨🇴 🇪🇸</div>
+            </div>
+			<!-- <code>&lt;div&gt;📅&lt;/div&gt;</code> --->
+			
+			<!-- <code>&#x1f1e8;&#x1f1f4;</code> -->
+			<!-- <div>&#x1F1E8;&#x1F1F4;</div> --> 
+        </div>
+        
+        <button class="whatsapp-btn" onclick="shareOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+        </button>
+    </div>
+    
+    <script>
+         // Fecha objetivo: 5 de Julio de 2025
+        const targetDate = new Date('2025-07-05T09:30:00');
+       
+        function updateCountdown() {
+            const now = new Date();
+            const diff = targetDate - now;
+           
+            if (diff <= 0) {
+                document.getElementById('countdown').innerHTML = '<h2>¡El viaje ha comenzado! 🎉✈️</h2>';
+                return;
+            }
+           
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+           
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+       
+        function shareOnWhatsApp() {
+            const days = document.getElementById('days').textContent;
+            const hours = document.getElementById('hours').textContent;
+            const minutes = document.getElementById('minutes').textContent;
+           
+            const message = encodeURIComponent(
+                `⏱️ *Cuenta regresiva para nuestro viaje a CALI!* ⏱️\n\n` +
+                `Faltan exactamente:\n` +
+                `*${days} días* ${hours}h ${minutes}min\n\n` +
+                `📅 Fecha de viaje: *5 de Julio de 2025*\n\n` +
+                `¡Prepárate para la aventura! ✈️🌍`
+            );
+           
+            window.open(`https://wa.me/?text=${message}`, '_blank');
+        }
+       
+        // Actualizar cada segundo
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Inicialización
+    </script>
+    </script>
+</body>
+</html>

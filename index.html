@@ -9,8 +9,8 @@
         body {
             font-family: 'Arial', sans-serif;
             text-align: center;
-            background-image: url("https://www.emausnavarra.org/images/cali4.jpg");
-            /* background: linear-gradient(135deg, #6a11cb 60%, #2575fc 100%); */
+            /*background-image: url("https://www.emausnavarra.org/images/cali4.jpg"); */
+            background: linear-gradient(135deg, #6a11cb 60%, #2575fc 100%);
             color: white;
             padding: 40px 20px;
             min-height: 100vh;
@@ -18,6 +18,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+	    transition: background-image 1s ease; /* Efecto de transición */
         }
        
         .container {
@@ -187,7 +188,27 @@
     </div>
     
     <script>
-         // Fecha objetivo: 5 de Julio de 2025
+         const fondos = [
+        "url('https://www.emausnavarra.org/images/cali.jpg)", // Imagen 1 (ejemplo)
+        "url('https://www.emausnavarra.org/images/cali2.jpg')", // Imagen 2 (ejemplo)
+        "url('https://www.emausnavarra.org/images/cali3.jpg')", // Imagen 3 (ejemplo)
+        "url('https://www.emausnavarra.org/images/cali4.jpg')", // Imagen 3 (ejemplo)
+    ];
+
+    let indiceActual = 0;
+    function cambiarFondo(element, listaFondos) {
+        let nuevoFondo = listaFondos[indiceActual];
+        element.style.backgroundImage = nuevoFondo;
+        indiceActual++;
+        if (indiceActual >= listaFondos.length) {
+            indiceActual = 0;
+        }
+    }
+    let body = document.body;
+    let intervalo = setInterval(function() {
+        cambiarFondo(body, fondos);
+    }, 30000); // Cada 30 segundos
+	    // Fecha objetivo: 5 de Julio de 2025
         const targetDate = new Date('2025-07-05T09:30:00');
        
         function updateCountdown() {
@@ -229,7 +250,6 @@
         // Actualizar cada segundo
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Inicialización
-    </script>
     </script>
 </body>
 </html>
